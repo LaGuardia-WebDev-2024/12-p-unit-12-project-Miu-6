@@ -1,15 +1,15 @@
 <!-- Unit 12 Project
 Requirements
-[  ] $() Select by Element, ID AND Class 
-[  ] Use Three Different jQuery Methods 
-[  ] Add Five CSS Declarations
-[  ] Include Three Images
+[ y ] $() Select by Element, ID AND Class 
+[ y ] Use Three Different jQuery Methods 
+[ y ] Add Five CSS Declarations
+[ y ] Include Three Images
 
 Select ONE Additional 
 [ no ] Feature 1 - Use .addClass() method
 [ no ] Feature 2 - Use a variable in javaScript 
 [ no ] Feature 3 - Use .mouseover() method
-[ no ] Feature 4 - Use .show() method
+[ y ] Feature 4 - Use .show() method
 [ no ] Feature 5 - Use .append() method
 -->
 
@@ -30,32 +30,60 @@ Select ONE Additional
       <li>
         <h3 id="mem1">Memory #1</h3>
         <p>More about this memory.</p>
+        <img
+             width="300"
+             id="drawing"
+             src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/image/rDtN98Qoishumwih/illustration-of-a-man-drawing-a-picture_SB_PM.jpg"
+             style="display: none"
+             />
       </li>
 
       <li>
         <h3 id="mem2">Memory #2</h3>
         <p>More about this memory.</p>
+        <img
+             width="300"
+             id="laughing"
+             src="https://c8.alamy.com/comp/2BXGPTW/drawing-funny-portrait-of-a-man-laughing-farcical-expressions-of-asian-guy-vector-illustration-2BXGPTW.jpg"
+             style="display: none"
+             />
       </li>
 
       <li>
         <h3 id="mem3">Memory #3</h3>
-        <p>More about this memory</p>
+        <p class="memory">More about this memory</p>
+        <img
+             width="300"
+             id="trip"
+             src="https://i.pinimg.com/736x/4a/35/50/4a3550a93354746f7a452928589f93df.jpg"
+             style="display: none"
+             />
       </li>
     </ol>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
+      $("h1").html("<u>Happy memories</u>");
+      $("p").html("All the fun times");
+      $(".memory").html("Field trip!");
       $("#mem1-button").click(function () {
         $("#mem1").css("color", "purple");
+        $("#drawing").show(2000);
+        
       });
 
       $("#mem2-button").click(function () {
         $("#mem2").css("color", "blue");
+        $("#laughing").show(2000);
       });
 
       $("#mem3-button").click(function () {
         $("#mem3").css("color", "green");
+        $("#trip").show(2000);
       });
+      
+      $("body").css("background-color", "rgb(30,190,70)");
+      
     </script>
   </body>
 </html>
